@@ -15,11 +15,11 @@ while(True):
     #cv2.imshow('frame', gray)
     cv2.imshow('frame', frame)
 
+    # Get keypress index
     key = cv2.waitKey(1)
-    #if key != -1:
-    #    print('Key:', key)
 
     if key == 27 or key == ord('q'):
+        # Exit on Escape or "q" key press
         break
     elif key == ord('s'):
         cv2.imwrite('pictures/image' + str(img_index) + '.jpeg', frame)
